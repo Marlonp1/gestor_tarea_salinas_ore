@@ -25,5 +25,9 @@ class TestGestorTareas(unittest.TestCase):
         for i, tarea in enumerate(self.gestor.tareas, start=1):
             print(f"{i}. {tarea.titulo}: {tarea.descripcion} - {'Completada' if tarea.completada else 'Pendiente'}")
 
+    def test_marcar_completada(self):
+        self.gestor.agregar_tarea("Tarea 1", "Descripción de la tarea 1")
+        self.gestor.marcar_completada(0)
+        self.assertTrue(self.gestor.tareas[0].completada)
 if __name__ == "__main__":
     unittest.main()

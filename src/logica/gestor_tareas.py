@@ -25,6 +25,15 @@ class GestorTareas:
         else:
             print("No hay tareas en la lista.")
 
+    def obtener_tareas(self):
+        return self.tareas
+
+    def marcar_completada(self, indice):
+        if 0 <= indice < len(self.tareas):
+            self.tareas[indice].completada = True
+        else:
+            raise IndexError("Índice fuera de rango")
+
 if __name__ == "__main__":
     gestor = GestorTareas()
     gestor.agregar_tarea("Tarea 1", "Descripción de la tarea 1")
