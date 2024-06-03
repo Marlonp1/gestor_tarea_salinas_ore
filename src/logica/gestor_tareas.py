@@ -6,7 +6,5 @@ class Tarea:
         self.titulo = titulo
         self.descripcion = descripcion
         self.completada = False
-
-
 class GestorTareas:
-    pass
+ pass
