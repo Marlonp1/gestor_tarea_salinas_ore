@@ -34,6 +34,12 @@ class GestorTareas:
         else:
             raise IndexError("Índice fuera de rango")
 
+    def eliminar_tarea(self, indice):
+        if 0 <= indice < len(self.tareas):
+            del self.tareas[indice]
+        else:
+            raise IndexError("Índice fuera de rango")
+
 if __name__ == "__main__":
     gestor = GestorTareas()
     gestor.agregar_tarea("Tarea 1", "Descripción de la tarea 1")
